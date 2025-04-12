@@ -1,11 +1,10 @@
 import Webcam from 'react-webcam'
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { PoseLandmarker, HandLandmarker, FilesetResolver, DrawingUtils } from "@mediapipe/tasks-vision";
 
 const videoConstraints = { width: 480, height: 270, facingMode: "user" }
 
 function Posedetector({ onPoseDataUpdate }) {
-    const [poseData, setPoseData] = useState([])
     const webcamRef = useRef(null)
     const landmarkerRef = useRef(null)
 
